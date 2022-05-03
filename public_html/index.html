@@ -13,7 +13,6 @@ Web designer and web developer,ready for new projects.">
 
 <link rel="stylesheet" type="text/css" href="css/meyer.css">
 <link href="css/portfolio.css" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Yeon+Sung&display=swap" rel="stylesheet">
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150919028-3"></script>
@@ -24,7 +23,6 @@ Web designer and web developer,ready for new projects.">
 
   gtag('config', 'UA-150919028-3');
 </script>
-
 <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="fancyapps-fancyBox-18d1712/lib/jquery.mousewheel-3.0.6.pack.js"></script>
 <link rel="stylesheet" href="fancyapps-fancyBox-18d1712/source/jquery.fancybox.css">
@@ -34,26 +32,88 @@ Web designer and web developer,ready for new projects.">
 <script  src="fancyapps-fancyBox-18d1712/source/helpers/jquery.fancybox-media.js"></script>
 <link rel="stylesheet" href="fancyapps-fancyBox-18d1712/source/helpers/jquery.fancybox-thumbs.css">
 <script src="fancyapps-fancyBox-18d1712/source/helpers/jquery.fancybox-thumbs.js"></script>
+<script>
+	$(document).ready(function() {
+		$(".fancybox").fancybox();
+	});
+</script>
+<script>
+$(document).ready(function() {
+	$(".fancybox-thumb").fancybox({
+		prevEffect	: 'none',
+		nextEffect	: 'none',
+		helpers	: {
+			title	: {
+				type: 'outside'
+			},
+			thumbs	: {
+				width	: 50,
+				height	: 50
+			}
+		}
+	});
+});
+</script>
+<script>
+$(".fancybox").fancybox({
+    afterShow: function() {
+        $(".fancybox-title").wrapInner('<div />').show();
+        
+        $(".fancybox-wrap").hover(function() {
+            $(".fancybox-title").show();
+        }, function() {
+            $(".fancybox-title").hide();
+        });
+    },
+    helpers : {
+        title: {
+            type: 'over'
+        }
+    }
+});
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="Create-Leaves-Falling-Rotating-Effects-with-jQuery-CSS3/js/jquery.rotate.js"></script>
-<script src="Create-Leaves-Falling-Rotating-Effects-with-jQuery-CSS3/js/jquery.classyleaves.min.js"></script>
-<link rel="stylesheet" href="Create-Leaves-Falling-Rotating-Effects-with-jQuery-CSS3/css/jquery.classyleaves.min.css">
+
+
+
+</script>
+
 </head>
 <body>
 <div  id="wrraper">
+  <div class="container" onclick="myFunction(this)">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+  </div>
+  
+  <script>
+
+    
+  function myFunction(x) {
+    x.classList.toggle("change");
+    var element = document.getElementById("first-nav");
+  element.classList.toggle("visible");
+
+  }
+  </script>
+  <div class="navigation" id="first-nav" onclick="myFunction(this)">
+    <div class="bottom"><a href="#aboutobjasnjenje"><h3>About me</h3></a></div>
+    <div class="bottom"><a href="#meny"><h3>Work</h3></a></div>
+    <div class="bottom"><a href="Contact.html"><h3>Contact</h3></a></div>
+    </div>
+<header>
 <div id="headerimageup" class="ukrasnaslika">
 <img src="images/logogore12345.svg" alt="headerimageup">
 </div>
 <div id="textheader">
-<h1>Diana Djordjevic</h1></div>
+<h1>Diana Djordjevic</h1>
+<p>-UX Designer  with  advanced coding Skills-</p>
+</div>
 <div id="headerimagedown" class="ukrasnaslika">
 <img src="images/logodole1234.svg" alt="">
 </div>
-<div class="navigation">
-<div class="bottom"><a href="#aboutobjasnjenje"><h3>About me</h3></a></div>
-<div class="bottom"><a href="#meny"><h3>Work</h3></a></div>
-<div class="bottom"><a href="Contact.html"><h3>Contact</h3></a></div>
-</div>
+</header>
 <div id="sidebar">
 <div class="objasnjenje" id="aboutobjasnjenje">
 <img src="images/ja.png" alt="junior frontend developer">
@@ -77,7 +137,8 @@ One of my hobbies is to make jewelry. <br/>
 <p>Bravery and imagination make impossible things,possible!</p>
 <p>Every job should be done with love!</p>
 <p>If the problem exists, just look at it from another angle!</p>
-</div></div>
+</div>
+</div>
 <div class="ukrasnaslika">
 <img src="images/logodole1234.svg" alt="logo service">
 </div>
@@ -92,6 +153,7 @@ One of my hobbies is to make jewelry. <br/>
 <div class="bottom filter-button" data-filter="craftings" ><h3>Craftings</h3></div>
 <div class="bottom filter-button" data-filter="graphic-design" id="graphic" ><h3>Graphic design</h3></div>
 </div><br>
+<div class="meny-images">
 	
 <a  href="http://www.bebiville.com" target="_blank" >
 <img class="filter websites" src="images/Bebiville500x500.jpg"  alt="online-shop-woo-commerce"/></a>
@@ -128,14 +190,11 @@ One of my hobbies is to make jewelry. <br/>
 <img class="filter craftings" src="images/jewelry500x500.png"  alt="handmade-jewelry"/></a>
 
 </div>
+</div>
 <div class="ukrasnaslika">
 <img src="images/logodole1234.svg" alt="creative homepage">
 </div>
-<div class="navigation">
-<div class="bottom"><a href="#aboutobjasnjenje"><h3>About me</h3></a></div>
-<div class="bottom"><a href="#meny"><h3>Work</h3></a></div>
-<div class="bottom"><a href="Contact.html"><h3>Contact</h3></a></div>
-</div>
+
 <footer><p>Diana Djordjevic Portfolio</p><p>Copyright &copy; 2022</p></footer>
 </div>
 <script src="js/fancy_box_functins.js"></script>
