@@ -54,21 +54,18 @@ header {
   margin-bottom: 2.5%;
   margin-top: 2.5%; }
   #textheader h1 {
+    color: #0040ad;
     font-family: 'Inspiration', cursive;
     font-size: 200%; }
   #textheader p {
+    font-weight: 100;
+    color: #062f75;
     font-size: 30px;
     margin-top: 1%; }
 
 #meny img {
   margin: 1vw;
   border-radius: 5%; }
-
-#headerimageup {
-  margin-top: 15%; }
-
-#headerimagedown {
-  margin-bottom: 10%; }
 
 .bottom {
   cursor: pointer;
@@ -144,11 +141,9 @@ footer {
   font-size: 25px;
   text-align: center; }
 
-#sidebar h2 {
-  text-shadow: 0 0 3px #78AB46; }
-
-#meny h2 {
-  text-shadow: 0 0 3px #78AB46; }
+h2 {
+  color: #0040ad;
+  font-weight: 600; }
 
 @media screen and (min-width: 1024px) and (max-width: 1260px) {
   h1 {

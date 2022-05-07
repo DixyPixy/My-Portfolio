@@ -33,6 +33,28 @@
 </head>
 <body>
 <div id="wrraper">
+	<div class="container" onclick="myFunction(this)">
+		<div class="bar1"></div>
+		<div class="bar2"></div>
+		<div class="bar3"></div>
+	  </div>
+	  
+	  <script>
+	
+		
+	  function myFunction(x) {
+		x.classList.toggle("change");
+		var element = document.getElementById("first-nav");
+	  element.classList.toggle("visible");
+	
+	  }
+	  </script>
+	  <div class="navigation" id="first-nav" onclick="myFunction(this)">
+		<div class="bottom"><a href="index.html#header"><h3>Home</h3></a></div>
+		<div class="bottom"><a href="index.html#aboutobjasnjenje"><h3>About me</h3></a></div>
+		<div class="bottom"><a href="index.html#meny"><h3>Work</h3></a></div>
+	</div>
+
 <div id="header" class="ukrasnaslika">
 <img src="images/logogore12345.svg"  alt=""/>
 </div>
@@ -52,8 +74,8 @@
 <p><label  for="email">Contact e-mail:<br/> </label>
 <input type="email" name="email" required/></p>
 
-<p><label for="message">Project description:<br/> </label>
-<textarea id="textarea" name="message" cols="40" rows="10" required></textarea></p>
+<p><label for="message">Project description:<br/> </label></p>
+<p><textarea id="textarea" name="message" cols="40" rows="10" required></textarea></p>
 
 <input id="submit" name="submit" type="submit" value="Send Message "/>
 
@@ -62,11 +84,6 @@
 </div>
 <div class="ukrasnaslika">
 <img src="images/logodole1234.svg"  alt="" />
-</div>
-<div class="navigation">
-<div class="bottom"><a href="index.html#header"><h3>Home</h3></a></div>
-<div class="bottom"><a href="index.html#aboutobjasnjenje"><h3>About me</h3></a></div>
-<div class="bottom"><a href="index.html#meny"><h3>Work</h3></a></div>
 </div>
 <footer><p>Diana Djordjevic Portfolio</p><p>Copyright &copy; 2021</p></footer>
 </div>
