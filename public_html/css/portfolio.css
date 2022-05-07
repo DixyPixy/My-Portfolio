@@ -1,11 +1,11 @@
 body {
-  background-color: #78AB46; }
+  background-color: #6D9267; }
 
 #wrraper {
   width: 90%;
   font-family: 'Hannotate SC';
   color: #000;
-  font-size: 25px;
+  font-size: 30px;
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
@@ -13,7 +13,7 @@ body {
 
 #first-nav {
   background-color: #FFFAEE;
-  padding-bottom: 1%;
+  padding-bottom: .5%;
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -21,11 +21,15 @@ body {
   flex-wrap: wrap;
   align-items: center;
   position: fixed;
-  top: 0;
+  top: -15px;
   left: 0;
   justify-content: center;
-  box-shadow: 0 0 3px #78AB46;
-  z-index: 1; }
+  z-index: 1;
+  box-shadow: 0 0 3px #6D9267; }
+
+#first-nav h3:hover {
+  color: #000;
+  text-shadow: 1px 1px 1px #6D9267; }
 
 .meny-images {
   display: flex;
@@ -40,7 +44,6 @@ header {
   justify-content: center; }
 
 #textheader {
-  text-shadow: 0 0 3px #78AB46;
   font-weight: 700;
   text-align: center;
   font-size: 60px;
@@ -50,6 +53,9 @@ header {
   width: 100%;
   margin-bottom: 2.5%;
   margin-top: 2.5%; }
+  #textheader h1 {
+    font-family: 'Inspiration', cursive;
+    font-size: 200%; }
   #textheader p {
     font-size: 30px;
     margin-top: 1%; }
@@ -84,12 +90,6 @@ header {
   margin-right: -50%;
   transform: translate(-50%, -50%); }
 
-/* this is if i want to isolate all button for work above other buttons
-#all{
-	float:none;
-	margin-left:auto;
-	margin-right:auto;
-}*/
 .bottom:hover {
   animation: shake 0.6s infinite;
   animation-timing-function: linear;
@@ -111,7 +111,6 @@ header {
     transform: rotate(-1.5deg); } }
 
 a {
-  text-shadow: 0 0 3px #78AB46;
   color: #000;
   text-decoration: none; }
 
@@ -135,13 +134,15 @@ a {
 footer {
   margin-top: 5%;
   background-color: #FFFAEE;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  height: 15vh;
   overflow: hidden;
-  font-size: 15px;
-  text-align: center;
-  padding-top: 5%;
-  padding-bottom: 5%; }
+  font-size: 25px;
+  text-align: center; }
 
 #sidebar h2 {
   text-shadow: 0 0 3px #78AB46; }
@@ -157,43 +158,24 @@ footer {
     width: 960px; }
   .ukrasnaslika img {
     width: 100%; }
-  footer {
-    display: block;
-    width: 100%;
-    overflow: hidden;
-    font-size: 15px;
-    text-align: center;
-    padding-top: 5%;
-    padding-bottom: 5%; }
   #textheader {
     font-weight: 700;
     text-align: center;
     font-size: 50px;
-    margin-left: auto;
-    margin-right: auto;
     height: auto;
     width: 100%;
-    margin-bottom: 2.5%;
-    margin-top: 2.5%; }
+    margin-bottom: 2.5% auto; }
   #meny img {
     width: 400px;
     margin: 1vw; }
   a {
-    text-shadow: 0 0 3px #78AB46;
     color: #000;
     text-decoration: none; } }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   a {
-    text-shadow: 0 0 3px #78AB46;
     color: #000;
     text-decoration: none; }
-  /* this is if i want to isolate all button for work above other buttons
-#all{
-	float:none;
-	margin-left:auto;
-	margin-right:auto;
-}*/
   #textheader {
     font-weight: 700;
     text-align: center;
@@ -209,19 +191,16 @@ footer {
     width: 100%;
     padding-top: 100px; }
   .ukrasnaslika img {
-    width: 100%; }
-  footer {
-    display: block;
-    width: 100%;
-    overflow: hidden;
-    font-size: 15px;
-    text-align: center;
-    padding-top: 5%;
-    padding-bottom: 5%; } }
+    width: 100%; } }
 
 @media screen and (min-width: 454px) and (max-width: 767px) {
   #wrraper {
     font-size: 20px; }
+  #first-nav .bottom h3 {
+    font-size: 30px; }
+  #first-nav .bottom {
+    width: 100%;
+    background-size: 27%; }
   .ukrasnaslika img {
     width: 100%; }
   .container {
@@ -237,7 +216,7 @@ footer {
     cursor: pointer;
     margin: 1%;
     position: fixed;
-    right: 40px;
+    right: 5%;
     z-index: 2; }
   .bar1, .bar2, .bar3 {
     width: 35px;
@@ -256,7 +235,7 @@ footer {
     transform: rotate(45deg) translate(-9px, -8px); }
   #first-nav.visible {
     background-color: #FFFAEE;
-    height: 30vh;
+    height: 50vh;
     flex-direction: column;
     row-gap: 40px;
     position: fixed;
@@ -270,38 +249,27 @@ footer {
     align-items: center;
     align-content: center; }
     #first-nav.visible h3:hover {
-      color: #fff; }
+      color: #000; }
   #first-nav {
     display: none; }
   .bottom {
-    font-size: 20px;
     background-size: 70%;
-    height: 70px;
     margin-left: auto;
     margin-right: auto; }
+  .bottom h3 {
+    top: 40%; }
   a {
-    text-shadow: 0 0 3px #78AB46;
     color: #000;
     text-decoration: none; }
   #meny img {
     width: 100%;
-    margin-bottom: 2px;
-    border: 2px solid #78AB46;
     display: block;
-    margin-left: -1%; }
+    margin: 2vw 0; }
   .objasnjenje {
     float: none;
     width: 100%; }
   #many {
     width: 90%; }
-  footer {
-    display: block;
-    width: 100%;
-    overflow: hidden;
-    font-size: 15px;
-    text-align: center;
-    padding-top: 5%;
-    padding-bottom: 5%; }
   #textheader {
     font-weight: 700;
     text-align: center;
@@ -321,14 +289,8 @@ footer {
   flex-wrap: wrap;
   align-items: center; }
 
-/* this is if i want to isolate all button for work above other buttons
-#all{
-	float:none;
-	margin-left:auto;
-	margin-right:auto;
-}*/
 #meny {
-  text-height: 48pt;
+  font-size: 30px;
   padding: 40px; }
 
 #sidebar {
@@ -340,7 +302,7 @@ footer {
   overflow-wrap: anywhere;
   height: auto;
   border-radius: 0 150px 150px 0;
-  text-height: 48pt;
+  font-size: 30px;
   padding: 0 5% 0;
   overflow: hidden; }
 
@@ -350,7 +312,7 @@ footer {
 
 .ukrasnaslika {
   clear: both;
-  align-context: center; }
+  align-content: center; }
 
 .fancybox-title-over-wrap {
   width: 100%;
@@ -360,33 +322,74 @@ footer {
   padding: 10px; }
 
 @media screen and (max-width: 453px) {
-  .bottom {
-    font-size: 20px;
-    background-size: 85%;
+  #first-nav .bottom h3 {
+    font-size: 30px; }
+  #first-nav .bottom {
+    width: 100%;
+    background-size: 35%; }
+  .container {
+    background-color: #FFFAEE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 6px;
+    border-radius: 50px;
+    width: 60px;
     height: 60px;
+    cursor: pointer;
+    margin: 1%;
+    position: fixed;
+    right: 5%;
+    z-index: 2; }
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    border-radius: 50px;
+    background-color: #78AB46;
+    border: 1px solid #000;
+    transition: 0.4s; }
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-12px, 6px); }
+  .change .bar2 {
+    opacity: 0; }
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-9px, -8px); }
+  #first-nav.visible {
+    background-color: #FFFAEE;
+    height: 50vh;
+    flex-direction: column;
+    row-gap: 40px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 90%;
+    justify-content: center;
+    border-radius: 0 0 50px 0;
+    display: flex;
+    left: 5%;
+    align-items: center;
+    align-content: center; }
+    #first-nav.visible h3:hover {
+      color: #fff; }
+  #first-nav {
+    display: none; }
+  .bottom {
+    width: 100%;
+    font-size: 30px;
+    background-size: 35%;
     margin-left: auto;
     margin-right: auto; }
   #meny img {
+    margin: 1vw 0;
     width: 100%; }
   #works {
     display: flex;
     flex-direction: column;
     row-gap: 10px; }
-  #graphic h3 {
-    margin: 0;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%); }
-  /* this is if i want to isolate all button for work above other buttons
-#all{
-	float:none;
-	margin-left:auto;
-	margin-right:auto;
-}*/
   a {
-    text-shadow: 0 0 3px #78AB46;
     color: #000;
     text-decoration: none; }
   #headerimageup {
@@ -402,25 +405,14 @@ footer {
     font-weight: 700;
     text-align: center;
     font-size: 30px;
-    margin-left: auto;
-    margin-right: auto;
     height: auto;
     width: 100%;
-    margin-top: 2.5%;
-    margin-bottom: 2.5%; }
+    margin-top: 2.5% auto; }
   #meny {
     padding: 5%; }
   .objasnjenje {
     float: none;
     width: 100%;
-    padding-bottom: 5%; }
-  footer {
-    display: block;
-    width: 100%;
-    overflow: hidden;
-    font-size: 15px;
-    text-align: center;
-    padding-top: 5%;
     padding-bottom: 5%; } }
 
 @media screen and (max-width: 300px) {
