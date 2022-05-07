@@ -170,6 +170,8 @@ form p {
     margin: 0 auto;
     width: 90%;
     height: auto; }
+  input, textarea {
+    width: 60%; }
   #meny {
     text-align: center; }
   .ukrasnaslika img {
@@ -248,19 +250,14 @@ form p {
     width: 100%; }
   footer {
     width: 100%; }
-  #textarea {
-    width: 60%; }
   #meny {
-    width: 90%;
     text-align: center;
     font-size: 30px;
     padding: 40px; }
-  #meny h3 {
-    font-size: 25px; }
-  form {
-    font-size: 25px; }
   label {
     width: 100%; }
+  input, textarea {
+    width: 80%; }
   #contact1 {
     text-align: center;
     align-content: center; }
@@ -293,6 +290,8 @@ form p {
     background-color: #78AB46;
     border: 1px solid #000;
     transition: 0.4s; }
+  input, textarea {
+    width: 80%; }
   .change .bar1 {
     -webkit-transform: rotate(-45deg) translate(-9px, 6px);
     transform: rotate(-45deg) translate(-12px, 6px); }
@@ -327,7 +326,6 @@ form p {
     margin-left: auto;
     margin-right: auto; }
   #wrraper {
-    font-size: 15px;
     width: 90%;
     margin: auto auto; }
   .ukrasnaslika img {
@@ -339,10 +337,4 @@ form p {
   #meny {
     text-align: center; }
   #meny h2 {
-    font-size: 30px; }
-  #meny h3 {
-    font-size: 20px; }
-  form {
-    font-size: 20px; }
-  #textarea {
-    width: 60%; } }
+    font-size: 30px; } }
