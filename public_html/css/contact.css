@@ -35,8 +35,7 @@ body {
   box-shadow: 0 0 3px #6D9267; }
 
 #first-nav h3:hover {
-  color: #000;
-  text-shadow: 1px 1px 1px #6D9267; }
+  color: #000; }
 
 footer {
   margin-top: 5%;
@@ -108,20 +107,28 @@ a {
     transform: rotate(-1.5deg); } }
 
 .ukrasnaslika {
-  width: 100%;
-  display: inline-flex; }
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; }
 
-.ukrasnaslika img {
-  width: 80%;
-  margin: auto auto; }
+#header img {
+  width: 100%; }
+
+label {
+  margin: 1vw 0; }
 
 input, textarea {
+  color: #0040ad;
   border: 1px solid transparent;
   border-radius: 20px;
-  width: 30vw; }
+  width: 30vw;
+  font-family: inherit;
+  font-size: inherit; }
 
 input {
-  height: 2vh; }
+  height: auto;
+  text-align: center; }
 
 form p {
   margin: 1vw 0; }
@@ -144,8 +151,7 @@ form p {
   margin: 0 auto; }
 
 #submit:hover {
-  background: #0040ad;
-  box-shadow: 0 1px 1px #597dbb; }
+  background: #0040ad; }
 
 @media screen and (min-width: 1024px) and (max-width: 1260px) {
   #wrraper {

@@ -39,7 +39,6 @@ body {background-color: #6D9267;}
 
 			#first-nav h3:hover {
 				color: #000; 
-				text-shadow: 1px 1px 1px #6D9267;
 			}
 
 		footer {
@@ -111,22 +110,31 @@ a {
   100% { transform: rotate(-1.5deg); }
 }	
 .ukrasnaslika {
-	width: 100%;
-	display: inline-flex;
+	width: 70%;
+	margin: 0 auto;
+	display:flex;
+	flex-direction: column;
 }
+#header img {width: 100%;}
 
-.ukrasnaslika img {
-			width: 80%;
-			margin: auto auto;		
-}
+
+label {margin: 1vw 0;}
 
 input, textarea {
+	color: #0040ad;
 	border: 1px solid transparent;
 	border-radius: 20px;
 	width: 30vw;
+	font-family:inherit;
+	font-size: inherit;
 }
-input {height: 2vh;}
-form p {margin: 1vw 0;}
+input {
+	height: auto; 
+	text-align: center;
+}
+form p {margin: 1vw 0;
+
+}
 
 #submit {
 	margin: 1vw 0;
@@ -148,7 +156,6 @@ form p {margin: 1vw 0;}
 
 #submit:hover { 
 	background: #0040ad;
-	box-shadow:  0 1px 1px #597dbb;
 }
 
 @media screen and (min-width:1024px) and (max-width:1260px) {		

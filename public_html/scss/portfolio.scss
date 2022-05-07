@@ -14,6 +14,7 @@ body {background-color: #6D9267;}
 	}	
 
 #first-nav {
+
 background-color: #FFFAEE;
 padding-bottom: .5%;
 width: 100%;
@@ -31,7 +32,6 @@ box-shadow: 0 0 3px #6D9267;
 }
 #first-nav h3:hover {
 	color: #000; 
-	text-shadow: 1px 1px 1px #6D9267;
 }
 
 
@@ -61,14 +61,15 @@ box-shadow: 0 0 3px #6D9267;
 	margin-top: 2.5%;
 
 	h1 {
-		color: #0040ad;
+	//	color: #085893;
 		font-family: 'Inspiration', cursive; 
 		font-size: 200%;
+		text-shadow: 0 0 1px white;
 	}
 
 	p {
 		font-weight: 100;
-		color: #062f75;
+	//	color: #002560;
 		font-size: 30px; 
 		margin-top:1%;}
 }
