@@ -155,15 +155,11 @@ form p {
 
 @media screen and (min-width: 1024px) and (max-width: 1260px) {
   #wrraper {
-    margin: 0 auto;
-    width: 960px; }
+    margin: 0 auto; }
   #meny {
-    width: 960px;
     text-align: center; }
   .ukrasnaslika img {
-    width: 100%; }
-  .navigation {
-    width: 960px; } }
+    width: 100%; } }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   #wrraper {
