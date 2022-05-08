@@ -5,12 +5,41 @@ body {background-color: #6D9267;}
 	width: 90%;
 	font-family: 'Hannotate SC';
 	color: #000;
-	font-size: 30px;
+	font-size: 24px;
 	margin-left: auto;
 	margin-right: auto;
 	overflow: hidden;
 	background-color: #d1e4bd;
 	}
+
+.social-media-icons {
+	font-size: 16px;;
+	padding: 1vw;
+	background: #FFFAEE;
+	border-radius: 25px;
+	position: fixed;
+	top: 50vh;
+	right: 5%;
+	display: flex;
+	flex-direction: column;
+	row-gap: 1.5em;
+	justify-content: center;
+    align-items: center;
+}
+
+.social-icon {
+	font-weight: 600;
+	writing-mode: horizontal-tb;
+	color: #fff;
+	padding: 1vw; 
+	border-radius: 25px;
+	width: fit-content;
+	height: auto;
+	background: #597dbb;
+	font-size: 24px;
+
+	&:hover {background:#0040ad;}
+}
 	
 	#header {
 		display: flex;
@@ -51,7 +80,6 @@ body {background-color: #6D9267;}
 			width: 100%;
 			height: 15vh;
 			overflow: hidden;
-			font-size: 25px;
 			text-align: center;
 				}
 
@@ -64,11 +92,11 @@ body {background-color: #6D9267;}
 			background-repeat:no-repeat;
 			background-size:auto;
 			background-position:bottom;
-			font-size:30px;
 			float:left;
 	} 
 
 #meny {
+	line-height: 1.5em;
 	text-align:center;
 	padding-top:2%;
 }
@@ -83,12 +111,12 @@ h2 {
 }
 
 .bottom h3 {
-		margin:0;
-		position:absolute;
-		top:50%;
-		left:50%;
-		margin-right:-50%;
-		transform:translate(-50%, -50%)
+		margin: 0;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-right: -50%;
+		transform: translate(-50%, -50%)
 	}
 		
 .bottom:hover { 
@@ -110,13 +138,12 @@ a {
   100% { transform: rotate(-1.5deg); }
 }	
 .ukrasnaslika {
-	width: 70%;
+	width: 60%;
 	margin: 0 auto;
 	display:flex;
 	flex-direction: column;
 }
-#header img {width: 100%;}
-
+.first-image {margin-top: 5em;}
 
 label {margin: 1vw 0;}
 
@@ -139,7 +166,6 @@ form p {margin: 1vw 0;
 #submit {
 	margin: 1vw 0;
 	font-family: 'Hannotate SC';
-	font-size: 30px;
 	background-color: #597dbb;
 	border-radius: 25px;
 	color: #fff;
@@ -161,10 +187,10 @@ form p {margin: 1vw 0;
 @media screen and (min-width:1024px) and (max-width:1260px) {		
 	
  #wrraper {margin:0 auto;}
-
  #meny {text-align:center;}
-
-.ukrasnaslika img {width:100%;}
+ input, textarea {width: 60%;}
+ .first-image {margin-top: 5em;}
+ .ukrasnaslika{width: 100%;}
 }
 
 @media screen and (min-width:768px) and (max-width:1023px) {
@@ -177,22 +203,26 @@ form p {margin: 1vw 0;
  input, textarea {width: 60%;}
 
  #meny{text-align:center;}
-.ukrasnaslika img{width:100%;}
-
-#header{	
-	padding-top:5%;
-	padding-bottom:5%;
-		}
+ .ukrasnaslika{width: 100%;}
+ .first-image {margin-top: 15%;}
 }
 
 @media screen and (min-width:454px) and (max-width:767px) {
 	
 #wrraper {
 width:90%;
- height:auto;
- font-size:20px;
-  margin:auto auto;
+height:auto;
+font-size:20px;
+margin:auto auto;
  }
+
+ .social-media-icons { 
+	margin: 4vw auto;
+	position: inherit;
+	flex-direction: row;
+	width: fit-content;
+}
+.social-icon {margin: 0 1vw;}
 
  .container {
 	background-color: #FFFAEE;
@@ -288,11 +318,21 @@ width:100%;
 overflow:hidden;
 	}
 	
-.ukrasnaslika img{width:100%;}
+.ukrasnaslika {width:100%;}
 
 }
 
 @media screen and (max-width:453px){
+
+	form p {margin: 4vw 0;}
+
+	.social-media-icons { 
+		margin: 4vw auto;
+		position: inherit;
+		flex-direction: row;
+		width: fit-content;
+	}
+	.social-icon {margin: 0 1vw;}
 
 	.container {
 		background-color: #FFFAEE;
@@ -354,7 +394,7 @@ overflow:hidden;
 		h3:hover { color:#000 ; }
 	}
 
-	#first-nav{display: none;}
+#first-nav{display: none;}
 
 .bottom{ 
 		font-size:20px;
@@ -371,15 +411,11 @@ overflow:hidden;
 
  }
 
-.ukrasnaslika img{
-	width:100%;
-	margin:0;
+.ukrasnaslika{
+	width: 100%;
+	margin: 0;
 	}
-	
-#header img{
-	width:100%;
-	padding-top:15%;
-		}
+.first-image {margin-top: 2em;}
 
 #meny {text-align:center;}	
 #meny h2 {font-size:30px; }		
