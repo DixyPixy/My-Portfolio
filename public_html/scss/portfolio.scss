@@ -58,11 +58,11 @@ align-items: center;
 	a {text-decoration: underline;}
 }
 
-#meny img:hover .overlay {
+#menu img:hover .overlay {
 	opacity: 1;
   }
 
-.meny-images {
+.menu-images {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -76,7 +76,7 @@ align-items: center;
     justify-content: center;
 	}
 
-#textheader {
+#header-text {
 	font-weight: 700;
 	text-align: center;
 	font-size: 60px;
@@ -99,7 +99,7 @@ align-items: center;
 		margin-top:1%;}
 }
 
-#meny img { 
+#menu img { 
 	margin: 1vw;
 	border-radius:5%;
 	&:hover {box-shadow: 0 0 5px #6D9267;}
@@ -154,19 +154,19 @@ a {
 	text-decoration: none;
 }
 	
-.ukrasnaslika {
+.deco-image {
 			width: 100%;
 			display: inline-flex;
 		}
 
-.ukrasnaslika img {
+.deco-image img {
 			width: 80%;
 			margin: auto auto;
 				
 	}
-#aboutobjasnjenje {padding-top: 10%;}
+#aboutsidebar-parts {padding-top: 10%;}
 
-#aboutobjasnjenje img {
+#aboutsidebar-parts img {
 			float: right;
 			border-radius: 50%;
 			width: 30%;
@@ -200,9 +200,9 @@ h2 {
 }
 
 .navigation {width:960px;}
-.ukrasnaslika img {width:100%;}
+.deco-image img {width:100%;}
 
-#textheader {
+#header-text {
 	font-weight: 700;
 	text-align: center;
 	font-size: 50px;
@@ -210,7 +210,7 @@ h2 {
 	width: 100%;
 	margin-bottom: 2.5% auto;
 }
-#meny img {width: 400px; margin: 1vw;}
+#menu img {width: 400px; margin: 1vw;}
 
 a {	
 		color: #000;
@@ -224,7 +224,7 @@ a {
 	text-decoration: none;
 }
 
-#textheader {
+#header-text {
 	font-weight: 700;
 	text-align: center;
 	font-size: 40px;
@@ -236,13 +236,13 @@ a {
 	margin-top: 2.5%;
 }
  
-.objasnjenje {
+.sidebar-parts {
 		 float: none;
 		 width: 100%;
 		padding-top: 100px;
 			}
 
-.ukrasnaslika img {width:100%;}	
+.deco-image img {width:100%;}	
 }
 
 @media screen and (min-width:454px) and (max-width:767px) {
@@ -254,7 +254,7 @@ a {
 		background-size: 27%;
 	}
 
-.ukrasnaslika img {width:100%;}
+.deco-image img {width:100%;}
 
 		.container {
 			background-color: #FFFAEE;
@@ -329,20 +329,20 @@ a {
 	text-decoration: none;
 }
 
-#meny img {
+#menu img {
 		width: 100%;
 		display: block;
 		margin: 2vw 0;
 		  }
 
-.objasnjenje {
+.sidebar-parts {
 		 float:none;
 		 width:100%;
 			}
 
  #many {width:90%;}	
 
-#textheader {
+#header-text {
 	font-weight: 700;
 	text-align: center;
 	font-size: 40px;
@@ -364,7 +364,7 @@ flex-wrap: wrap;
 align-items: center;
 	}
 
-#meny {
+#menu {
 	padding: 40px;
 	}	
 
@@ -381,12 +381,14 @@ align-items: center;
 	padding: 0 5% 0;
 	overflow: hidden;
 		}
-			#workobjasnjenje {
+
+		a {text-decoration: underline;}
+			#work-explained {
 				padding-bottom: 10%;
 				text-align: start;
 			}
 
-.ukrasnaslika {
+.deco-image {
 		clear: both;
 		align-content: center;
 		}
@@ -472,7 +474,7 @@ align-items: center;
 		margin-right: auto;
 	}
 
-	#meny img {
+	#menu img {
 		margin: 1vw 0;
 		width: 100%;
 	}
@@ -488,7 +490,7 @@ a {
 	text-decoration: none;
 	}
 
-#headerimageup {margin-top:30%;}
+#header-image-up {margin-top:30%;}
 	
 #wrraper {
   font-size: 15px;
@@ -496,9 +498,9 @@ a {
  }
  
  #sidebar {padding: 10% 5%;}
-.ukrasnaslika img {width:100%;}
+.deco-image img {width:100%;}
 
-#textheader {
+#header-text {
 	font-weight: 700;
 	text-align: center;
 	font-size: 30px;
@@ -506,9 +508,9 @@ a {
 	width: 100%;
 	margin-top: 2.5% auto;
 }
-#meny {padding:5%;}			
+#menu {padding:5%;}			
 
-.objasnjenje {
+.sidebar-parts {
 	float: none;
 	width: 100%;
 	padding-bottom: 5%;
