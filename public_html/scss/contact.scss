@@ -1,21 +1,35 @@
 @charset "utf-8";
-body {background-color: #6D9267;}
+
+//Colors
+$body-color: #6D9267;
+$wrraper-color: #d1e4bd;
+$dark: #000;
+$light: #fff;
+$nav-color: #fffaee;
+$button-color: #597dbb;
+$button-hover: #0040ad;
+
+//Fonts
+$wrraper-font: $wrraper-font;
+$main-font-size: 24px;
+
+body {background-color: $body-color;}
 
 #wrraper {
 	width: 90%;
-	font-family: 'Hannotate SC';
-	color: #000;
+	font-family: $wrraper-font;
+	color: $dark;
 	font-size: 24px;
 	margin-left: auto;
 	margin-right: auto;
 	overflow: hidden;
-	background-color: #d1e4bd;
+	background-color: $wrraper-color;
 	}
 
 .social-media-icons {
-	font-size: 16px;;
+	font-size: 16px;
 	padding: 1vw;
-	background: #FFFAEE;
+	background: $nav-color;
 	border-radius: 25px;
 	position: fixed;
 	top: 50vh;
@@ -30,15 +44,15 @@ body {background-color: #6D9267;}
 .social-icon {
 	font-weight: 600;
 	writing-mode: horizontal-tb;
-	color: #fff;
+	color: $light;
 	padding: 1vw; 
 	border-radius: 25px;
 	width: fit-content;
 	height: auto;
-	background: #597dbb;
+	background: $button-color;
 	font-size: 24px;
 
-	&:hover {background:#0040ad;}
+	&:hover {background:$button-hover;}
 }
 	
 	#header {
@@ -50,7 +64,7 @@ body {background-color: #6D9267;}
 		}
 
 		#first-nav {
-			background-color: #FFFAEE;
+			background-color: $nav-color;
 			padding-bottom: .5%;
 			width: 100%;
 			overflow: hidden;
@@ -63,16 +77,16 @@ body {background-color: #6D9267;}
 			left: 0;
 			justify-content: center;
 			z-index: 1;
-			box-shadow: 0 0 3px #6D9267;
+			box-shadow: 0 0 3px $body-color;
 			}
 
 			#first-nav h3:hover {
-				color: #000; 
+				color: $dark; 
 			}
 
 		footer {
 			margin-top: 5%;
-			background-color: #FFFAEE;
+			background-color: $nav-color;
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
@@ -104,7 +118,7 @@ body {background-color: #6D9267;}
 h2 {
 	font-weight: 600;
 	font-size: 40px;
-	color: #0040ad;}
+	color: $button-hover;}
 
 #menu h3 {
 	font-size:30px;
@@ -125,10 +139,10 @@ h2 {
 }
 
 a {
-		color:#000;
+		color:$dark;
 		text-decoration:none;}
 		
-.navigation h3:hover {color:#fff;}
+.navigation h3:hover {color:$light;}
 
 @keyframes shake {
   0% { transform: rotate(0.5deg); }
@@ -148,7 +162,7 @@ a {
 label {margin: 1vw 0;}
 
 input, textarea {
-	color: #0040ad;
+	color: $button-hover;
 	border: 1px solid transparent;
 	border-radius: 20px;
 	width: 30vw;
@@ -165,10 +179,10 @@ form p {margin: 1vw 0;
 
 #submit {
 	margin: 1vw 0;
-	font-family: 'Hannotate SC';
-	background-color: #597dbb;
+	font-family: $wrraper-font;
+	background-color: $button-color;
 	border-radius: 25px;
-	color: #fff;
+	color: $light;
 	cursor: pointer;
 	padding: 10px;
 	width: auto;
@@ -181,7 +195,7 @@ form p {margin: 1vw 0;
 	}
 
 #submit:hover { 
-	background: #0040ad;
+	background: $button-hover;
 }
 
 @media screen and (min-width:1024px) and (max-width:1260px) {		
@@ -225,7 +239,7 @@ margin:auto auto;
 .social-icon {margin: 0 1vw;}
 
  .container {
-	background-color: #FFFAEE;
+	background-color: $nav-color;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -246,7 +260,7 @@ margin:auto auto;
 	height: 5px;
 	border-radius: 50px;
 	background-color: #78AB46;
-	border: 1px solid #000;
+	border: 1px solid $dark;
 	transition: 0.4s;
   }
   
@@ -263,7 +277,7 @@ margin:auto auto;
   }
 
   #first-nav.visible {
-	background-color: #FFFAEE;
+	background-color: $nav-color;
 	height: 50vh;
 	flex-direction: column;
 	row-gap: 40px;
@@ -284,15 +298,14 @@ margin:auto auto;
 #first-nav{display: none;}
 
 .bottom {
-			font-size:25px;
-			background-size:70%;
-			height:80px;
-			float:left;
-			display:block;
-			width:33.33%;
-			margin-left:auto;
-			margin-right:auto;
-			
+			font-size: 25px;
+			background-size: 70%;
+			height: 80px;
+			float: left;
+			display: block;
+			width: 33.33%;
+			margin-left: auto;
+			margin-right: auto;
 			}
 			
 #header {padding-top:15%;}
@@ -314,15 +327,15 @@ input, textarea {width: 80%;}
 	}
 
 .navigation{	
-width:100%;
-overflow:hidden;
+width: 100%;
+overflow: hidden;
 	}
 	
 .deco-image {width:100%;}
 
 }
 
-@media screen and (max-width:453px){
+@media screen and (max-width:453px) {
 
 	form p {margin: 4vw 0;}
 
@@ -335,7 +348,7 @@ overflow:hidden;
 	.social-icon {margin: 0 1vw;}
 
 	.container {
-		background-color: #FFFAEE;
+		background-color: $nav-color;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -347,7 +360,7 @@ overflow:hidden;
 		cursor: pointer;
 		margin: 1%;
 		position: fixed;
-		right: 5%;
+		right: $padding-m;
 		z-index: 2;
 	  }
 	  
@@ -356,7 +369,7 @@ overflow:hidden;
 		height: 5px;
 		border-radius: 50px;
 		background-color: #78AB46;
-		border: 1px solid #000;
+		border: 1px solid $dark;
 		transition: 0.4s;
 	  }
 
@@ -376,7 +389,7 @@ overflow:hidden;
 
 
 	  #first-nav.visible {
-		background-color: #FFFAEE;
+		background-color: $nav-color;
 		height: 50vh;
 		flex-direction: column;
 		row-gap: 40px;
@@ -394,21 +407,20 @@ overflow:hidden;
 		h3:hover { color:#000 ; }
 	}
 
-#first-nav{display: none;}
+#first-nav {display: none;}
 
-.bottom{ 
-		font-size:20px;
-		background-size:85%;
-		height:60px;
-		margin-left:auto;
-		margin-right:auto;
+.bottom { 
+		font-size: 20px;
+		background-size: 85%;
+		height: 60px;
+		margin-left: auto;
+		margin-right: auto;
 
 	}
 
 #wrraper {
-  width:90%;
-  margin:auto auto;
-
+  width: 90%;
+  margin: auto auto;
  }
 
 .deco-image{

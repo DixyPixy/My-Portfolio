@@ -1,20 +1,36 @@
 @charset "utf-8";
 
-body {background-color: #6D9267;}
+//Colors
+$body-color: #6D9267;
+$wrraper-color: #d1e4bd;
+$dark: #000;
+$light: #fff;
+$nav-color: #fffaee;
+$button-color: #597dbb;
+$button-hover: #0040ad;
+
+//Fonts
+$wrraper-font: 'Hannotate SC';
+$main-font-size: 24px;
+
+//Padings
+$padding-m: 5%;
+
+body {background-color: $body-color;}
 
 #wrraper {
 	width: 90%;
-	font-family: 'Hannotate SC';
-	color: #000;
-	font-size: 24px;
+	font-family: $wrraper-font;
+	color: $dark;
+	font-size: $main-font-size; 
 	margin-left: auto;
 	margin-right: auto;
 	overflow: hidden;
-	background-color: #d1e4bd;
+	background-color: $wrraper-color;
 	}	
 
 #first-nav {
-background-color: #FFFAEE;
+background-color: $nav-color;
 padding-bottom: .5%;
 width: 100%;
 overflow: hidden;
@@ -27,10 +43,10 @@ top: -15px;
 left: 0;
 justify-content: center;
 z-index: 1;
-box-shadow: 0 0 3px #6D9267;
+box-shadow: 0 0 3px $body-color;
 }
 
-#first-nav h3:hover {color: #000; }
+#first-nav h3:hover {color: $dark;}
 
 .overlay {
 line-height: 1.5em;
@@ -44,7 +60,7 @@ right: 1vw;
 border-radius: 0 0 25px 25px;
 opacity: 0;
 transition: .5s ease;
-background-color: #597dbb;
+background-color: $button-color;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -52,15 +68,13 @@ align-items: center;
 }
 
 .image-container {
-	color: #fff;
+	color: $light;
 	position: relative;
 
 	a {text-decoration: underline;}
 }
 
-#menu img:hover .overlay {
-	opacity: 1;
-  }
+.image-container:hover .overlay {opacity: 1;}
 
 .menu-images {
 	display: flex;
@@ -101,8 +115,8 @@ align-items: center;
 
 #menu img { 
 	margin: 1vw;
-	border-radius:5%;
-	&:hover {box-shadow: 0 0 5px #6D9267;}
+	border-radius: $padding-m;
+	&:hover {box-shadow: 0 0 5px $body-color;}
 }
 #works {	
 	width: 100%;
@@ -139,7 +153,7 @@ align-items: center;
   animation: shake 0.6s infinite;
   animation-timing-function: linear; color:aliceblue;  
 }
-.navigation h3:hover {color:#fff;}
+.navigation h3:hover {color:$light;}
 
 @keyframes shake {
   0% { transform: rotate(0.5deg); }
@@ -150,7 +164,7 @@ align-items: center;
 }
 
 a {
-	color: #000;
+	color: $dark;
 	text-decoration: none;
 }
 	
@@ -174,8 +188,8 @@ a {
 		}
 
 footer {
-	margin-top: 5%;
-	background-color: #FFFAEE;
+	margin-top: $padding-m;
+	background-color: $nav-color;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -187,7 +201,7 @@ footer {
 		}
 
 h2 { 
-	color: #0040ad;
+	color: $button-hover;
 	font-weight: 600;
 	font-size: 30px;
 }	
@@ -213,14 +227,14 @@ h2 {
 #menu img {width: 400px; margin: 1vw;}
 
 a {	
-		color: #000;
+		color: $dark;
 		text-decoration: none;}
 }
 
 @media screen and (min-width:768px) and (max-width:1023px) {
 
 a {	
-	color: #000;
+	color: $dark;
 	text-decoration: none;
 }
 
@@ -232,8 +246,8 @@ a {
 	margin-right: auto;
 	height: auto;
 	width: 100%;
-	margin-bottom: 2.5%;
-	margin-top: 2.5%;
+	margin-bottom: $padding-m / 2;
+	margin-top: $padding-m / 2;
 }
  
 .sidebar-parts {
@@ -257,7 +271,7 @@ a {
 .deco-image img {width:100%;}
 
 		.container {
-			background-color: #FFFAEE;
+			background-color: $nav-color;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -269,7 +283,7 @@ a {
 			cursor: pointer;
 			margin: 1%;
 			position: fixed;
-			right: 5%;
+			right: $padding-m;
 			z-index: 2;
 		  }
 		  
@@ -278,7 +292,7 @@ a {
 			height: 5px;
 			border-radius: 50px;
 			background-color: #78AB46;
-			border: 1px solid #000;
+			border: 1px solid $dark;
 			transition: 0.4s;
 		  }
 		  
@@ -296,7 +310,7 @@ a {
 
 
 		  #first-nav.visible {
-			background-color: #FFFAEE;
+			background-color: $nav-color;
 			height: 50vh;
 			flex-direction: column;
 			row-gap: 40px;
@@ -325,7 +339,7 @@ a {
 .bottom h3 {top: 40%;}
 
 a {		
-	color: #000;
+	color: $dark;
 	text-decoration: none;
 }
 
@@ -350,8 +364,8 @@ a {
 	margin-right: auto;
 	height: auto;
 	width: 100%;
-	margin-bottom: 2.5%;
-	margin-top: 2.5%;
+	margin-bottom: rem-calc(#{$padding-m} / 2);
+	margin-top: rem-calc(#{$padding-m} / 2);
 }	
 }
 
@@ -373,18 +387,18 @@ align-items: center;
 	display: flex;
 	flex-direction: column;
 	row-gap: 40px;
-	margin: 5% auto;
-	background-color: #FFFAEE;
+	margin: $padding-m auto;
+	background-color: $nav-color;
 	overflow-wrap: anywhere;
 	height: auto;
 	border-radius: 0 150px 150px 0;
-	padding: 0 5% 0;
+	padding: 0 $padding-m 0;
 	overflow: hidden;
 		}
 
 		a {text-decoration: underline;}
 			#work-explained {
-				padding-bottom: 10%;
+				padding-bottom: $padding-m * 2;
 				text-align: start;
 			}
 
@@ -408,7 +422,7 @@ align-items: center;
 		background-size: 35%;}
 
 	.container {
-		background-color: #FFFAEE;
+		background-color: $nav-color;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -420,7 +434,7 @@ align-items: center;
 		cursor: pointer;
 		margin: 1%;
 		position: fixed;
-		right: 5%;
+		right: $padding-m;
 		z-index: 2;
 	  }
 	  
@@ -429,7 +443,7 @@ align-items: center;
 		height: 5px;
 		border-radius: 50px;
 		background-color: #78AB46;
-		border: 1px solid #000;
+		border: 1px solid $dark;
 		transition: 0.4s;
 	  }
 	  
@@ -447,7 +461,7 @@ align-items: center;
 
 
 	  #first-nav.visible {
-		background-color: #FFFAEE;
+		background-color: $nav-color;
 		height: 50vh;
 		flex-direction: column;
 		row-gap: 40px;
@@ -458,7 +472,7 @@ align-items: center;
 		justify-content: center;
 		border-radius: 0 0 50px 0;
 		display: flex;
-		left: 5%;
+		left: $padding-m;
 		align-items: center;
 		align-content: center;
 
@@ -486,7 +500,7 @@ align-items: center;
 }
 	
 a {
-	color: #000;
+	color: $dark;
 	text-decoration: none;
 	}
 
@@ -497,7 +511,7 @@ a {
   width: 94%;
  }
  
- #sidebar {padding: 10% 5%;}
+ #sidebar {padding: rem-calc(#{$padding-m} * 2) $padding-m;}
 .deco-image img {width:100%;}
 
 #header-text {
@@ -506,17 +520,17 @@ a {
 	font-size: 30px;
 	height: auto;
 	width: 100%;
-	margin-top: 2.5% auto;
+	margin-top: rem-calc(#{$padding-m} / 2) auto;
 }
-#menu {padding:5%;}			
+#menu {padding: $padding-m;}			
 
 .sidebar-parts {
 	float: none;
 	width: 100%;
-	padding-bottom: 5%;
+	padding-bottom: $padding-m;
 			}				
 }
 
-@media screen and (max-width:300px) {
-	#sidebar {padding: 36% 5%;}
+@media screen and (max-width: 300px) {
+	#sidebar {padding: 36% $padding-m;}
 }

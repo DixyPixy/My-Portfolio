@@ -3,7 +3,7 @@ body {
 
 #wrraper {
   width: 90%;
-  font-family: 'Hannotate SC';
+  font-family: "Hannotate SC";
   color: #000;
   font-size: 24px;
   margin-left: auto;
@@ -14,7 +14,7 @@ body {
 .social-media-icons {
   font-size: 16px;
   padding: 1vw;
-  background: #FFFAEE;
+  background: #fffaee;
   border-radius: 25px;
   position: fixed;
   top: 50vh;
@@ -46,7 +46,7 @@ body {
   justify-content: center; }
 
 #first-nav {
-  background-color: #FFFAEE;
+  background-color: #fffaee;
   padding-bottom: .5%;
   width: 100%;
   overflow: hidden;
@@ -66,7 +66,7 @@ body {
 
 footer {
   margin-top: 5%;
-  background-color: #FFFAEE;
+  background-color: #fffaee;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -161,7 +161,7 @@ form p {
 
 #submit {
   margin: 1vw 0;
-  font-family: 'Hannotate SC';
+  font-family: "Hannotate SC";
   background-color: #597dbb;
   border-radius: 25px;
   color: #fff;
@@ -218,7 +218,7 @@ form p {
   .social-icon {
     margin: 0 1vw; }
   .container {
-    background-color: #FFFAEE;
+    background-color: #fffaee;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -248,7 +248,7 @@ form p {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-9px, -8px); }
   #first-nav.visible {
-    background-color: #FFFAEE;
+    background-color: #fffaee;
     height: 50vh;
     flex-direction: column;
     row-gap: 40px;
@@ -309,7 +309,7 @@ form p {
   .social-icon {
     margin: 0 1vw; }
   .container {
-    background-color: #FFFAEE;
+    background-color: #fffaee;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -341,7 +341,7 @@ form p {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-9px, -8px); }
   #first-nav.visible {
-    background-color: #FFFAEE;
+    background-color: #fffaee;
     height: 50vh;
     flex-direction: column;
     row-gap: 40px;
