@@ -1,4 +1,5 @@
 @charset "utf-8";
+@import "../../node_modules/mappy-breakpoints/mappy-breakpoints";
 
 //Colors
 $body-color: #6D9267;
@@ -27,6 +28,11 @@ body {background-color: $body-color;}
 	margin-right: auto;
 	overflow: hidden;
 	background-color: $wrraper-color;
+	@include mappy-bp (max-width 767px) {font-size: 20px;}
+	@include mappy-bp (max-width 453px) {
+		font-size: 16px;
+		width: 94%;
+	}
 	}	
 
 #first-nav {
@@ -44,9 +50,19 @@ left: 0;
 justify-content: center;
 z-index: 1;
 box-shadow: 0 0 3px $body-color;
-}
+@include mappy-bp (max-width 767px) {display: none;}
 
-#first-nav h3:hover {color: $dark;}
+h3:hover {color: $dark;}
+
+.bottom {
+	@include mappy-bp (max-width 767px) {
+		width: 100%;
+		background-size: 27%;
+	}
+
+	@include mappy-bp (max-width 453px) {background-size: 35%;}
+}
+}
 
 .overlay {
 line-height: 1.5em;
@@ -65,16 +81,20 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
+
+@include mappy-bp (max-width 767px) {
+	left: 0;
+	right: 0;
+}
 }
 
 .image-container {
 	color: $light;
 	position: relative;
 
-	a {text-decoration: underline;}
+a {text-decoration: underline;}
+&:hover .overlay {opacity: 1;}
 }
-
-.image-container:hover .overlay {opacity: 1;}
 
 .menu-images {
 	display: flex;
@@ -82,7 +102,7 @@ align-items: center;
 	flex-wrap: wrap;
 }
 
-	header {
+header {
 	display: flex;
     flex-direction: column;
     height: 100vh;
@@ -94,30 +114,50 @@ align-items: center;
 	font-weight: 700;
 	text-align: center;
 	font-size: 60px;
-	margin-left: auto;
-	margin-right: auto;
 	height: auto;
 	width: 100%;
-	margin-bottom: 2.5%;
-	margin-top: 2.5%;
-
-	h1 {
-		font-family: 'Inspiration', cursive; 
-		font-size: 200%;
-		text-shadow: 0 0 1px white;
-	}
+	margin: 2.5% auto;
 
 	p {
 		font-weight: 100;
 		font-size: 30px; 
-		margin-top:1%;}
+		margin-top:1%;
+	}
+
+	@include mappy-bp (max-width 1260px) {font-size: 50px;}
+	@include mappy-bp (max-width 1023px) {font-size: 40px;}
+	@include mappy-bp (max-width 453px) {font-size: 30px;}
 }
 
-#menu img { 
+h1 {
+	font-family: 'Inspiration', cursive; 
+	font-size: 200%;
+	text-shadow: 0 0 1px white;
+
+	@include mappy-bp (max-width 1260px) {
+		text-align: center;
+		vertical-align: middle;
+}
+}
+
+#menu {
+	padding: $padding-m;
+img { 
 	margin: 1vw;
 	border-radius: $padding-m;
+
 	&:hover {box-shadow: 0 0 5px $body-color;}
+	@include mappy-bp (max-width 1260px) {width: 400px;}
+	@include mappy-bp (max-width 767px) {
+		width: 100%;
+		display: block;
+		margin: 2vw 0;
+	}
+
+	@include mappy-bp (max-width 453px) {margin: 1vw 0;}
 }
+}
+
 #works {	
 	width: 100%;
 	overflow: hidden;
@@ -125,6 +165,11 @@ align-items: center;
 	flex-direction: row;
 	flex-wrap: wrap;
 	align-items: center;
+
+	@include mappy-bp (max-width 453px) {
+		flex-direction: column;
+		row-gap: 10px;
+	}
 		}
 
 .bottom {
@@ -138,21 +183,32 @@ align-items: center;
 			background-size: auto;
 			background-position: bottom;
 			font-size: 24px;
-		} 
 
-.bottom h3{
-		margin: 0;
-		position: absolute;
-		top: 47%;
-		left: 50%;
-		margin-right: -50%;
-		transform: translate(-50%, -50%)
+			@include mappy-bp (max-width 767px) {
+				background-size: 70%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			@include mappy-bp (max-width 453px) {
+				width: 100%;
+				background-size: 35%;
+			}
+h3 {
+				margin: 0;
+				position: absolute;
+				top: 47%;
+				left: 50%;
+				margin-right: -50%;
+				transform: translate(-50%, -50%);
+				@include mappy-bp (max-width 767px) {top: 40%;}
 	}
-
-.bottom:hover { 
-  animation: shake 0.6s infinite;
-  animation-timing-function: linear; color:aliceblue;  
+&:hover { 
+		animation: shake 0.6s infinite;
+		animation-timing-function: linear; color:aliceblue;  
 }
+} 
+
 .navigation h3:hover {color:$light;}
 
 @keyframes shake {
@@ -171,13 +227,18 @@ a {
 .deco-image {
 			width: 100%;
 			display: inline-flex;
+		@include mappy-bp (max-width 767px) {
+			clear: both;
+			align-content: center;
 		}
-
-.deco-image img {
+img {
 			width: 80%;
 			margin: auto auto;
-				
-	}
+
+		@include mappy-bp (max-width 1260px) {width:100%;}
+}		
+}
+
 #aboutsidebar-parts {padding-top: 10%;}
 
 #aboutsidebar-parts img {
@@ -205,223 +266,19 @@ h2 {
 	font-weight: 600;
 	font-size: 30px;
 }	
-
-	@media screen and (min-width:1024px) and (max-width:1260px) {
-
- h1 {
-	text-align: center;
-	vertical-align: middle;
-}
-
-.navigation {width:960px;}
-.deco-image img {width:100%;}
-
-#header-text {
-	font-weight: 700;
-	text-align: center;
-	font-size: 50px;
-	height: auto;
-	width: 100%;
-	margin-bottom: 2.5% auto;
-}
-#menu img {width: 400px; margin: 1vw;}
-
-a {	
-		color: $dark;
-		text-decoration: none;}
-}
-
-@media screen and (min-width:768px) and (max-width:1023px) {
-
-a {	
-	color: $dark;
-	text-decoration: none;
-}
-
-#header-text {
-	font-weight: 700;
-	text-align: center;
-	font-size: 40px;
-	margin-left: auto;
-	margin-right: auto;
-	height: auto;
-	width: 100%;
-	margin-bottom: $padding-m / 2;
-	margin-top: $padding-m / 2;
-}
  
 .sidebar-parts {
-		 float: none;
-		 width: 100%;
+	@include mappy-bp (max-width 1023px) {
+		float: none;
+		width: 100%;
 		padding-top: 100px;
 			}
 
-.deco-image img {width:100%;}	
+	@include mappy-bp (max-width 453px){padding-bottom: $padding-m;}
 }
 
-@media screen and (min-width:454px) and (max-width:767px) {
-
- #wrraper {font-size:20px;}
-
-	#first-nav .bottom {
-		width: 100%;
-		background-size: 27%;
-	}
-
-.deco-image img {width:100%;}
-
-		.container {
-			background-color: $nav-color;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			row-gap: 6px;
-			border-radius: 50px;
-			width: 60px;
-			height: 60px;
-			cursor: pointer;
-			margin: 1%;
-			position: fixed;
-			right: $padding-m;
-			z-index: 2;
-		  }
-		  
-		  .bar1, .bar2, .bar3 {
-			width: 35px;
-			height: 5px;
-			border-radius: 50px;
-			background-color: #78AB46;
-			border: 1px solid $dark;
-			transition: 0.4s;
-		  }
-		  
-		  .change .bar1 {
-			-webkit-transform: rotate(-45deg) translate(-9px, 6px);
-			transform: rotate(-45deg) translate(-12px, 6px);
-		  }
-		  
-		  .change .bar2 {opacity: 0;}
-		  
-		  .change .bar3 {
-			-webkit-transform: rotate(45deg) translate(-8px, -8px);
-			transform: rotate(45deg) translate(-9px, -8px);
-		  }
-
-
-		  #first-nav.visible {
-			background-color: $nav-color;
-			height: 50vh;
-			flex-direction: column;
-			row-gap: 40px;
-			position: fixed;
-			top: 0;
-			z-index: 1;
-			width: 90%;
-			justify-content: center;
-			border-radius: 0 0 50px 0;
-			display: flex;
-			left: 5%;
-			align-items: center;
-    		align-content: center;
-
-			h3:hover { color:#000 ; }
-		}
-
-		#first-nav {display: none;}
-		
-.bottom {
-			background-size: 70%;
-			margin-left: auto;
-			margin-right: auto;
-			}
-
-.bottom h3 {top: 40%;}
-
-a {		
-	color: $dark;
-	text-decoration: none;
-}
-
-#menu img {
-		width: 100%;
-		display: block;
-		margin: 2vw 0;
-		  }
-
-.sidebar-parts {
-		 float:none;
-		 width:100%;
-			}
-
- #many {width:90%;}	
-
-#header-text {
-	font-weight: 700;
-	text-align: center;
-	font-size: 40px;
-	margin-left: auto;
-	margin-right: auto;
-	height: auto;
-	width: 100%;
-	margin-bottom: rem-calc(#{$padding-m} / 2);
-	margin-top: rem-calc(#{$padding-m} / 2);
-}	
-}
-
-#works {	
-width: 100%;
-overflow: hidden;
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-align-items: center;
-	}
-
-#menu {
-	padding: 40px;
-	}	
-
-#sidebar {
-	line-height: 1.5em;;
-	display: flex;
-	flex-direction: column;
-	row-gap: 40px;
-	margin: $padding-m auto;
-	background-color: $nav-color;
-	overflow-wrap: anywhere;
-	height: auto;
-	border-radius: 0 150px 150px 0;
-	padding: 0 $padding-m 0;
-	overflow: hidden;
-		}
-
-		a {text-decoration: underline;}
-			#work-explained {
-				padding-bottom: $padding-m * 2;
-				text-align: start;
-			}
-
-.deco-image {
-		clear: both;
-		align-content: center;
-		}
-
-
-.fancybox-title-over-wrap {
-    width: 100%;
-    padding: 0;
-}
-.fancybox-title-over-wrap > div {padding: 10px;	}
-
-@media screen and (max-width:453px) {
-
-
-	#first-nav .bottom {
-		width: 100%;
-		background-size: 35%;}
-
-	.container {
+.container {
+	@include mappy-bp (max-width 767px) {
 		background-color: $nav-color;
 		display: flex;
 		flex-direction: column;
@@ -436,101 +293,94 @@ align-items: center;
 		position: fixed;
 		right: $padding-m;
 		z-index: 2;
-	  }
-	  
-	  .bar1, .bar2, .bar3 {
-		width: 35px;
-		height: 5px;
-		border-radius: 50px;
-		background-color: #78AB46;
-		border: 1px solid $dark;
-		transition: 0.4s;
-	  }
-	  
-	  .change .bar1 {
-		-webkit-transform: rotate(-45deg) translate(-9px, 6px);
-		transform: rotate(-45deg) translate(-12px, 6px);
-	  }
-	  
-	  .change .bar2 {opacity: 0;}
-	  
-	  .change .bar3 {
-		-webkit-transform: rotate(45deg) translate(-8px, -8px);
-		transform: rotate(45deg) translate(-9px, -8px);
-	  }
-
-
-	  #first-nav.visible {
-		background-color: $nav-color;
-		height: 50vh;
-		flex-direction: column;
-		row-gap: 40px;
-		position: fixed;
-		top: 0;
-		z-index: 1;
-		width: 90%;
-		justify-content: center;
-		border-radius: 0 0 50px 0;
-		display: flex;
-		left: $padding-m;
-		align-items: center;
-		align-content: center;
-
-		h3:hover { color:#fff ; }
-
 	}
-	#first-nav {display: none;}
+}
 
-	.bottom { 
-		width: 100%;
-		background-size: 35%;
-		margin-left: auto;
-		margin-right: auto;
+	.bar1, .bar2, .bar3 {
+		@include mappy-bp (max-width 767px) {
+			width: 35px;
+			height: 5px;
+			border-radius: 50px;
+			background-color: #78AB46;
+			border: 1px solid $dark;
+			transition: 0.4s;
+		}
 	}
 
-	#menu img {
-		margin: 1vw 0;
-		width: 100%;
+	.change .bar1 {
+			@include mappy-bp (max-width 767px) {
+			-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+			transform: rotate(-45deg) translate(-12px, 6px);
+		}
 	}
 
-#works {
+	.change .bar2 {
+			@include mappy-bp (max-width 767px) {opacity: 0;}
+	}
+	
+	.change .bar3 {
+			@include mappy-bp (max-width 767px) {
+			-webkit-transform: rotate(45deg) translate(-8px, -8px);
+			transform: rotate(45deg) translate(-9px, -8px);	
+			}
+	}
+
+	#first-nav.visible {
+			@include mappy-bp (max-width 767px) {
+				background-color: $nav-color;
+				height: 50vh;
+				flex-direction: column;
+				row-gap: 40px;
+				position: fixed;
+				top: 0;
+				z-index: 1;
+				width: 90%;
+				justify-content: center;
+				border-radius: 0 0 50px 0;
+				display: flex;
+				left: 5%;
+				align-items: center;
+				align-content: center;
+	
+				h3:hover {color:#000;}
+			}
+	}
+
+#sidebar {
+	line-height: 1.5em;
 	display: flex;
 	flex-direction: column;
-	row-gap: 10px;
+	row-gap: 40px;
+	margin: $padding-m auto;
+	background-color: $nav-color;
+	overflow-wrap: anywhere;
+	height: auto;
+	border-radius: 0 150px 150px 0;
+	padding: 0 $padding-m 0;
+	overflow: hidden;
+
+	a {text-decoration: underline;}
+
+	#work-explained {
+				padding-bottom: $padding-m * 2;
+				text-align: start;
+			}
+
+	@include mappy-bp (max-width 453px) {padding: 10% $padding-m;}
+	@include mappy-bp (max-width 300px) {padding: 36% $padding-m;}
 }
-	
-a {
-	color: $dark;
-	text-decoration: none;
+
+.fancybox-title-over-wrap {
+	@include mappy-bp (max-width 767px) {
+		width: 100%;
+		padding: 0;
 	}
 
-#header-image-up {margin-top:30%;}
-	
-#wrraper {
-  font-size: 15px;
-  width: 94%;
- }
- 
- #sidebar {padding: rem-calc(#{$padding-m} * 2) $padding-m;}
-.deco-image img {width:100%;}
-
-#header-text {
-	font-weight: 700;
-	text-align: center;
-	font-size: 30px;
-	height: auto;
-	width: 100%;
-	margin-top: rem-calc(#{$padding-m} / 2) auto;
-}
-#menu {padding: $padding-m;}			
-
-.sidebar-parts {
-	float: none;
-	width: 100%;
-	padding-bottom: $padding-m;
-			}				
+	& > div {
+		@include mappy-bp (max-width 767px) {padding:10px;}
+	}
 }
 
-@media screen and (max-width: 300px) {
-	#sidebar {padding: 36% $padding-m;}
+#header-image-up {
+	@include mappy-bp (max-width 453px){margin-top: 30%;}
 }
