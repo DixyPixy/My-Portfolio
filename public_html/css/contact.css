@@ -386,7 +386,8 @@ h2 {
       margin: 0 1vw; } }
 
 #menu {
-  text-align: center; }
+  text-align: center;
+  padding: 5% 5% 0 5%; }
 
 .first-image {
   margin-top: 5em; }
@@ -449,3 +450,19 @@ form p {
   #contact1 {
     text-align: center;
     align-content: center; } }
+
+.form-message {
+  color: #0040ad;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  width: 30vw;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 1vw 0;
+  height: 40px; }
+  @media all and (max-width: 78.6875em) {
+    .form-message {
+      width: 60%; } }
+  @media all and (max-width: 47.875em) {
+    .form-message {
+      width: 80%; } }

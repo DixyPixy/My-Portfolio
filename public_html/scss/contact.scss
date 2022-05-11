@@ -38,7 +38,10 @@
 	@include mappy-bp (max-width 767px) {margin: 0 1vw;}
 }
 
-#menu {text-align: center;}
+#menu {
+	text-align: center;
+	padding: 5% 5% 0 5%;
+}
 
 .first-image {
 	margin-top: 5em;
@@ -97,5 +100,18 @@ form p {
 	text-align: center;
 	align-content: center;
 	}
+}
+
+.form-message {
+	color: $button-hover;
+	border: 1px solid transparent;
+	border-radius: 20px;
+	width: 30vw;
+	font-family: inherit;
+	font-size: inherit;
+	margin: 1vw 0;
+	height: 40px;
+	@include mappy-bp (max-width 1260px) {width: 60%;}
+	@include mappy-bp (max-width 767px) {width: 80%;}
 }
 
