@@ -1,7 +1,7 @@
 <?php 
 
-$name = $_POST['ime'];
-$lastname=$_POST['prezime'];
+$name = $_POST['name'];
+$lastname=$_POST['lastname'];
 $email = $_POST['email'];
 $message = $_POST['message'];
 

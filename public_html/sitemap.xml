@@ -7,7 +7,7 @@
     <priority>1.0</priority>
       <image:image>
         <image:loc>http://dianadjordjevic.com/jpg/logogore12345.svg</image:loc>
-        <image:title>headerimageup</image:title>
+        <image:title>header-image-up</image:title>
       </image:image>
       <image:image>
         <image:loc>http://dianadjordjevic.com/jpg/logodole1234.svg</image:loc>
