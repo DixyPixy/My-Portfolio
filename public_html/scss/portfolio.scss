@@ -1,21 +1,6 @@
 @charset "utf-8";
 @import "../../node_modules/mappy-breakpoints/mappy-breakpoints";
-
-//Colors
-$body-color: #6D9267;
-$wrraper-color: #d1e4bd;
-$dark: #000;
-$light: #fff;
-$nav-color: #fffaee;
-$button-color: #597dbb;
-$button-hover: #0040ad;
-
-//Fonts
-$wrraper-font: 'Hannotate SC';
-$main-font-size: 24px;
-
-//Padings
-$padding-m: 5%;
+@import "defaults.scss";
 
 body {background-color: $body-color;}
 

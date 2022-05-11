@@ -1,18 +1,5 @@
-@charset "utf-8";
 @import "../../node_modules/mappy-breakpoints/mappy-breakpoints";
-
-//Colors
-$body-color: #6D9267;
-$wrraper-color: #d1e4bd;
-$dark: #000;
-$light: #fff;
-$nav-color: #fffaee;
-$button-color: #597dbb;
-$button-hover: #0040ad;
-
-//Fonts
-$wrraper-font: $wrraper-font;
-$main-font-size: 24px;
+@import "defaults.scss";
 
 body {background-color: $body-color;}
 
@@ -25,7 +12,7 @@ body {background-color: $body-color;}
 	margin-right: auto;
 	overflow: hidden;
 	background-color: $wrraper-color;
-	}
+	} 
 
 .social-media-icons {
 	font-size: 16px;
@@ -52,7 +39,6 @@ body {background-color: $body-color;}
 	height: auto;
 	background: $button-color;
 	font-size: 24px;
-
 	&:hover {background:$button-hover;}
 }
 	
