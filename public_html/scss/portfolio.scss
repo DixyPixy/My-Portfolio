@@ -12,9 +12,11 @@ body {background-color: $body-color;}
 	margin-right: auto;
 	overflow: hidden;
 	background-color: $wrraper-color;
-	@include mappy-bp (max-width 453px) {width: 94%;
-	}
+	@include mappy-bp (max-width 453px) {width: 94%;}
 	}	
+
+	.text-medium {font-size: $font-m;}
+	.text-large {font-size: $font-l;}
 
 #first-nav {
 background-color: $nav-color;
@@ -57,7 +59,7 @@ right: 1vw;
 border-radius: 0 0 25px 25px;
 opacity: 0;
 transition: .5s ease;
-background-color: $button-color;
+background-color: $body-color;
 display: flex;
 flex-direction: column;
 justify-content: center;
@@ -123,6 +125,8 @@ h1 {
 
 #menu {
 	padding: $padding-m;
+	text-align: center;
+
 img { 
 	margin: 1vw;
 	border-radius: $padding-m;
@@ -185,11 +189,9 @@ h3 {
 	}
 &:hover { 
 		animation: shake 0.6s infinite;
-		animation-timing-function: linear; color:aliceblue;  
+		animation-timing-function: linear; color: $light;  
 }
 } 
-
-.navigation h3:hover {color:$light;}
 
 @keyframes shake {
   0% { transform: rotate(0.5deg); }
@@ -242,9 +244,8 @@ footer {
 		}
 
 h2 { 
-	color: $button-hover;
+	color: $h2-color;
 	font-weight: 600;
-	font-size: 26px;
 }	
  
 .sidebar-parts {
@@ -315,7 +316,6 @@ h2 {
 				z-index: 1;
 				width: 90%;
 				justify-content: center;
-				border-radius: 0 0 50px 0;
 				display: flex;
 				left: 5%;
 				align-items: center;

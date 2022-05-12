@@ -32,9 +32,9 @@
 	border-radius: 25px;
 	width: fit-content;
 	height: auto;
-	background: $button-color;
+	background: $linkedin-color;
 	font-size: 24px;
-	&:hover {background:$button-hover;}
+	&:hover {background: $linkedin-hover;}
 	@include mappy-bp (max-width 767px) {margin: 0 1vw;}
 }
 
@@ -55,7 +55,7 @@ label {
 }
 
 input, textarea {
-	color: $button-hover;
+	color: $dark;
 	border: 1px solid transparent;
 	border-radius: 20px;
 	width: 30vw;
@@ -79,7 +79,7 @@ form p {
 #submit {
 	margin: 1vw 0;
 	font-family: $wrraper-font;
-	background-color: $button-color;
+	background-color: $body-color;
 	border-radius: 25px;
 	color: $light;
 	cursor: pointer;
@@ -92,10 +92,8 @@ form p {
 	height: auto;
 	margin: 0 auto;
 
-	&:hover { background: $button-hover;}
+	&:hover { background: $h2-color;}
 }
-
-h2 { font-size: 30px;}
 
 #contact1 {
 	@include mappy-bp (max-width 767px) {
@@ -105,7 +103,6 @@ h2 { font-size: 30px;}
 }
 
 .form-message {
-	color: $button-hover;
 	width: 30vw;
 	font-family: inherit;
 	font-size: inherit;
