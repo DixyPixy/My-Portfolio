@@ -12,10 +12,7 @@ body {background-color: $body-color;}
 	margin-right: auto;
 	overflow: hidden;
 	background-color: $wrraper-color;
-	@include mappy-bp (max-width 767px) {font-size: 20px;}
-	@include mappy-bp (max-width 453px) {
-		font-size: 16px;
-		width: 94%;
+	@include mappy-bp (max-width 453px) {width: 94%;
 	}
 	}	
 
@@ -166,7 +163,6 @@ img {
 			background-repeat: no-repeat;
 			background-size: auto;
 			background-position: bottom;
-			font-size: 24px;
 
 			@include mappy-bp (max-width 767px) {
 				background-size: 70%;
@@ -248,14 +244,13 @@ footer {
 h2 { 
 	color: $button-hover;
 	font-weight: 600;
-	font-size: 30px;
+	font-size: 26px;
 }	
  
 .sidebar-parts {
 	@include mappy-bp (max-width 1023px) {
 		float: none;
 		width: 100%;
-		padding-top: 100px;
 			}
 
 	@include mappy-bp (max-width 453px){padding-bottom: $padding-m;}
@@ -312,7 +307,7 @@ h2 {
 	#first-nav.visible {
 			@include mappy-bp (max-width 767px) {
 				background-color: $nav-color;
-				height: 50vh;
+				height: 100vh;
 				flex-direction: column;
 				row-gap: 40px;
 				position: fixed;
@@ -363,8 +358,4 @@ h2 {
 	& > div {
 		@include mappy-bp (max-width 767px) {padding:10px;}
 	}
-}
-
-#header-image-up {
-	@include mappy-bp (max-width 453px){margin-top: 30%;}
 }

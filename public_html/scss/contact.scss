@@ -95,6 +95,8 @@ form p {
 	&:hover { background: $button-hover;}
 }
 
+h2 { font-size: 30px;}
+
 #contact1 {
 	@include mappy-bp (max-width 767px) {
 	text-align: center;
@@ -104,8 +106,6 @@ form p {
 
 .form-message {
 	color: $button-hover;
-	border: 1px solid transparent;
-	border-radius: 20px;
 	width: 30vw;
 	font-family: inherit;
 	font-size: inherit;
