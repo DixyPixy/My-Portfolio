@@ -226,8 +226,8 @@ img {
 #aboutsidebar-parts img {
 			float: right;
 			border-radius: 50%;
-			width: 30%;
-			height: 30%;
+			width: 25%;
+			@include mappy-bp (max-width 767px) {width:30%;}
 		}
 
 footer {

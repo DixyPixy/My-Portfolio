@@ -222,8 +222,10 @@ a {
 #aboutsidebar-parts img {
   float: right;
   border-radius: 50%;
-  width: 30%;
-  height: 30%; }
+  width: 25%; }
+  @media all and (max-width: 47.875em) {
+    #aboutsidebar-parts img {
+      width: 30%; } }
 
 footer {
   margin-top: 5%;
