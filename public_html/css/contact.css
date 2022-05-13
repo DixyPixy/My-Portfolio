@@ -367,17 +367,21 @@ h2 {
   font-weight: 600;
   writing-mode: horizontal-tb;
   color: #fff;
-  padding: 1vw;
-  border-radius: 25px;
-  width: fit-content;
-  height: auto;
-  background: #597dbb;
-  font-size: 24px; }
-  .social-icon:hover {
-    background: #0040ad; }
+  border-radius: 50px;
+  width: 55px;
+  height: 55px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
   @media all and (max-width: 47.875em) {
     .social-icon {
       margin: 0 1vw; } }
+
+.linkedin {
+  background: #597dbb; }
+  .linkedin:hover {
+    background: #0040ad; }
 
 #menu {
   text-align: center;

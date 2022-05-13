@@ -28,14 +28,20 @@
 	font-weight: 600;
 	writing-mode: horizontal-tb;
 	color: $light;
-	padding: 1vw; 
-	border-radius: 25px;
-	width: fit-content;
-	height: auto;
-	background: $linkedin-color;
-	font-size: 24px;
-	&:hover {background: $linkedin-hover;}
+	border-radius: 50px;
+	width: 55px;
+	height: 55px;
+	font-size: $font-m;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
 	@include mappy-bp (max-width 767px) {margin: 0 1vw;}
+}
+
+.linkedin {
+	background: $linkedin-color;
+	&:hover {background: $linkedin-hover;}
 }
 
 #menu {
