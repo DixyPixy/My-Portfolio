@@ -50,9 +50,10 @@
 }
 
 .first-image {
-	margin-top: 5em;
-	@include mappy-bp (max-width 1023px) {margin-top: 15%;}
-	@include mappy-bp (max-width 453px) {margin-top: 2em;}
+	padding-top: 5em;
+	background: linear-gradient(180deg, rgba(235,220,183,1) 16%, rgba(209,228,189,1) 81%);
+	@include mappy-bp (max-width 1023px) {padding-top: 15%;}
+	@include mappy-bp (max-width 453px) {padding-top: 2em;}
 }
 
 label {
@@ -85,9 +86,10 @@ form p {
 #submit {
 	margin: 1vw 0;
 	font-family: $wrraper-font;
-	background-color: $body-color;
+	background-color: $nav-color;
+	color: $button-font-color;
+	border: 1px solid $button-font-color;
 	border-radius: 25px;
-	color: $light;
 	cursor: pointer;
 	padding: 10px;
 	width: auto;
@@ -98,7 +100,7 @@ form p {
 	height: auto;
 	margin: 0 auto;
 
-	&:hover { background: $h2-color;}
+	&:hover { color: $body-color;}
 }
 
 #contact1 {
