@@ -129,10 +129,10 @@ display: none;
 	}
 
 	.text-under-image {
-		display: none;
+		display: none !important;
 
 		@include mappy-bp (max-width 767px)	{
-		display: flex;
+		display: flex !important;
 		color: $button-font-color;
 		align-self: center;
 		line-height: 1.5em;
@@ -142,10 +142,11 @@ display: none;
 }
 
 a {text-decoration: underline;}
+
 &:hover .overlay {
 	opacity: 1;
 	@include mappy-bp (max-width 767px)	{
-		display: none;
+		display: none !important;
 	}
 }
 }
@@ -168,7 +169,7 @@ header {
 #header-text {
 	font-weight: 700;
 	text-align: center;
-	font-size: 130%;
+	font-size: 200%;
 	height: auto;
 	width: 100%;
 	margin: 2.5% auto;
@@ -209,7 +210,7 @@ img {
 		border: none;
 		border-radius: 48px;
 		width: 100%;
-		display: block;
+		
 		margin: 0 0 2vw 0;
 	}
 

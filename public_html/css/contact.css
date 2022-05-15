@@ -121,10 +121,10 @@ body {
       flex-direction: column;
       justify-content: center; } }
   .image-container .text-under-image {
-    display: none; }
+    display: none !important; }
     @media all and (max-width: 47.875em) {
       .image-container .text-under-image {
-        display: flex;
+        display: flex !important;
         color: #835531;
         align-self: center;
         line-height: 1.5em;
@@ -136,7 +136,7 @@ body {
     opacity: 1; }
     @media all and (max-width: 47.875em) {
       .image-container:hover .overlay {
-        display: none; } }
+        display: none !important; } }
 
 .menu-images {
   display: flex;
@@ -154,7 +154,7 @@ header {
 #header-text {
   font-weight: 700;
   text-align: center;
-  font-size: 130%;
+  font-size: 200%;
   height: auto;
   width: 100%;
   margin: 2.5% auto; }
@@ -197,7 +197,6 @@ h1 {
         border: none;
         border-radius: 48px;
         width: 100%;
-        display: block;
         margin: 0 0 2vw 0; } }
     @media all and (max-width: 28.25em) {
       #menu img {
