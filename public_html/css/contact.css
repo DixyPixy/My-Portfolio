@@ -1,5 +1,5 @@
 body {
-  background-color: #6D9267; }
+  background: linear-gradient(180deg, #ebdcb7 0%, #fffaee 53%); }
 
 @media all and (min-width: 3840px) {
   #wrraper {
