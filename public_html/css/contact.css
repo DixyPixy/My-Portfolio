@@ -1,17 +1,28 @@
 body {
   background-color: #6D9267; }
 
-#wrraper {
-  font-family: "Dekko", cursive;
-  color: #000;
-  font-size: 24px;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-  background-color: #d1e4bd; }
-  @media all and (max-width: 28.25em) {
-    #wrraper {
-      width: 94%; } }
+@media all and (min-width: 3840px) {
+  #wrraper {
+    font-size: 2vh;
+    font-family: "Dekko", cursive;
+    color: #000;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    background-color: #d1e4bd; }
+    #wrraper .text-medium,
+    #wrraper .text-large {
+      font-size: 2vh; } }
+
+@media all and (max-width: 239.875em) {
+  #wrraper {
+    font-size: 24px;
+    font-family: "Dekko", cursive;
+    color: #000;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    background-color: #d1e4bd; } }
 
 .text-medium {
   font-size: 30px; }
@@ -20,9 +31,9 @@ body {
   font-size: 40px; }
 
 #first-nav {
-  background: linear-gradient(0deg, #ebdcb7 2%, #fffaee 53%);
+  background: linear-gradient(0deg, #ebdcb7 2%, #fffaee 100%);
   transition: all ease .3s;
-  padding-bottom: 1%;
+  padding-bottom: .5%;
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -143,14 +154,14 @@ header {
 #header-text {
   font-weight: 700;
   text-align: center;
-  font-size: 60px;
+  font-size: 130%;
   height: auto;
   width: 100%;
   margin: 2.5% auto; }
   #header-text p {
     font-weight: 100;
-    font-size: 30px;
-    margin-top: 1%; }
+    margin-top: 1%;
+    font-size: 24px; }
   @media all and (max-width: 78.6875em) {
     #header-text {
       font-size: 50px; } }
@@ -239,8 +250,12 @@ a {
   text-decoration: none; }
 
 .deco-image {
-  width: 100%;
-  display: inline-flex; }
+  width: 80%;
+  display: flex;
+  margin: 0 auto; }
+  @media all and (max-width: 78.6875em) {
+    .deco-image {
+      width: 80%; } }
   @media all and (max-width: 47.875em) {
     .deco-image {
       clear: both;
@@ -250,7 +265,7 @@ a {
     margin: auto auto; }
     @media all and (max-width: 78.6875em) {
       .deco-image img {
-        width: 100%; } }
+        width: 80%; } }
 
 #aboutsidebar-parts {
   padding-top: 10%; }
@@ -422,6 +437,11 @@ h2 {
 #menu {
   text-align: center;
   padding: 5% 5% 0 5%; }
+
+.deco-image {
+  width: 100%; }
+  .deco-image img {
+    width: 65%; }
 
 .first-image {
   padding-top: 5em;

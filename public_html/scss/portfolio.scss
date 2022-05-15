@@ -4,23 +4,36 @@
 body {background-color: $body-color;}
 
 #wrraper {
+	@include mappy-bp (min-width 3840px) {
+		font-size: 2vh;
+		font-family: $wrraper-font;
+		color: $dark;
+		margin-left: auto;
+		margin-right: auto;
+		overflow: hidden;
+		background-color: $wrraper-color;
+
+		.text-medium,
+		.text-large {font-size: 2vh;}
+	}
+	@include mappy-bp (max-width 3839px) {
+	font-size: $main-font-size; 
 	font-family: $wrraper-font;
 	color: $dark;
-	font-size: $main-font-size; 
 	margin-left: auto;
 	margin-right: auto;
 	overflow: hidden;
 	background-color: $wrraper-color;
-	@include mappy-bp (max-width 453px) {width: 94%;}
+	}
 	}	
 
 .text-medium {font-size: $font-m;}
 .text-large {font-size: $font-l;}
 
 #first-nav {
-background: linear-gradient(0deg, rgba(235,220,183,1) 2%, rgba(255,250,238,1) 53%);
+background: linear-gradient(0deg, rgba(235,220,183,1) 2%, rgba(255,250,238,1) 100%);
 transition: all ease .3s;
-padding-bottom: 1%;
+padding-bottom: .5%;
 width: 100%;
 overflow: hidden;
 display: flex;
@@ -155,15 +168,15 @@ header {
 #header-text {
 	font-weight: 700;
 	text-align: center;
-	font-size: 60px;
+	font-size: 130%;
 	height: auto;
 	width: 100%;
 	margin: 2.5% auto;
 
 	p {
 		font-weight: 100;
-		font-size: 30px; 
-		margin-top:1%;
+		margin-top: 1%;
+		font-size: $main-font-size;
 	}
 
 	@include mappy-bp (max-width 1260px) {font-size: 50px;}
@@ -251,8 +264,10 @@ a {
 }
 	
 .deco-image {
-			width: 100%;
-			display: inline-flex;
+			width: 80%;
+			display: flex;
+			margin: 0 auto;
+		@include mappy-bp (max-width 1260px) {width:80%;}
 		@include mappy-bp (max-width 767px) {
 			clear: both;
 			align-content: center;
@@ -261,7 +276,7 @@ img {
 			width: 80%;
 			margin: auto auto;
 
-		@include mappy-bp (max-width 1260px) {width:100%;}
+		@include mappy-bp (max-width 1260px) {width:80%;}
 }		
 }
 
