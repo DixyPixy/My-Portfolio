@@ -19,7 +19,12 @@
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+	function onSubmit(token) {
+	  document.getElementById("demo-form").submit();
+	}
+  </script>
 </head>
 <body>
 <div id="wrraper">
@@ -29,7 +34,7 @@
 		<div class="bar3"></div>
 	  </div>
 	  <script>
-		
+
 	  function myFunction(x) {
 		x.classList.toggle("change");
 		var element = document.getElementById("first-nav");
@@ -64,6 +69,10 @@
 </form>
 <iframe class="form-message" name="my_iframe" frameborder="0"></iframe>
 </div>
+<button class="g-recaptcha" 
+        data-sitekey="6Lep9fwfAAAAALNTQGtjK4OeiZ-zPDz36K8Lc3ny" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
 <div class="deco-image">
 <img src="images/logodole1234.svg"  alt="" />
 </div>
