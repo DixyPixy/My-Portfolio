@@ -13,7 +13,7 @@ $subject = "Contact Form";
 $mailheader = "From: $email \r\n";
 
 if(mail($recipient, $subject, $formcontent, $mailheader)){
-echo"<p>Your Message has been successfully sent!</p>";
+echo "<p>Your Message has been successfully sent!</p>";
 } else{
 	echo "<p>Error! Something went wrong! Try again</p>";}
 }

@@ -395,6 +395,7 @@ h2 {
 
 .social-media-icons {
   font-size: 16px;
+  color: #835531;
   padding: 1vw;
   background: #fffaee;
   border-radius: 25px;
@@ -411,27 +412,26 @@ h2 {
       margin: 4vw auto;
       position: inherit;
       flex-direction: row;
-      width: fit-content; } }
+      width: fit-content;
+      flex-wrap: wrap; } }
 
 .social-icon {
-  font-weight: 600;
-  writing-mode: horizontal-tb;
-  color: #fff;
-  border-radius: 50px;
   width: 55px;
   height: 55px;
-  font-size: 30px;
   display: flex;
   justify-content: center;
   align-items: center; }
   @media all and (max-width: 47.875em) {
     .social-icon {
       margin: 0 1vw; } }
+  @media all and (max-width: 28.25em) {
+    .social-icon {
+      margin: 0 3vw; } }
 
-.linkedin {
-  background: #597dbb; }
-  .linkedin:hover {
-    background: #0040ad; }
+.email img:hover,
+.github img:hover,
+.linkedin img:hover {
+  height: -webkit-fill-available; }
 
 #menu {
   text-align: center;
@@ -508,10 +508,11 @@ form p {
 
 .form-message {
   width: 30vw;
-  font-family: inherit;
-  font-size: inherit;
   margin: 1vw 0;
-  height: 40px; }
+  height: 50px;
+  font-size: 24px;
+  text-align: center;
+  font-family: "Dekko", cursive; }
   @media all and (max-width: 78.6875em) {
     .form-message {
       width: 60%; } }
