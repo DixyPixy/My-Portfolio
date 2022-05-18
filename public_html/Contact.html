@@ -65,14 +65,14 @@
 <p><input type="email" name="email" required/></p>
 <p><label for="message">Project description:</label></p>
 <p><textarea id="textarea" name="message" cols="40" rows="10" required></textarea></p>
-<input id="submit" name="submit" type="submit" value="Send Message "/>
+<button id="submit" name="submit" type="submit" value="Send Message"
+		class="g-recaptcha" 
+        data-sitekey="6Lep9fwfAAAAALNTQGtjK4OeiZ-zPDz36K8Lc3ny" 
+        data-callback='onSubmit' 
+        data-action='submit'>Send Message</button>
 </form>
 <iframe class="form-message" name="my_iframe" frameborder="0"></iframe>
 </div>
-<button class="g-recaptcha" 
-        data-sitekey="6Lep9fwfAAAAALNTQGtjK4OeiZ-zPDz36K8Lc3ny" 
-        data-callback='onSubmit' 
-        data-action='submit'>Submit</button>
 <div class="deco-image">
 <img src="images/logodole1234.svg"  alt="" />
 </div>

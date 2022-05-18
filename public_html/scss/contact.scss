@@ -49,7 +49,6 @@
 	padding: 5% 5% 0 5%;
 }
 
-
 .deco-image {
 width: 100%;
 
@@ -91,6 +90,7 @@ form p {
 }
 
 #submit {
+	font-size: inherit;
 	margin: 1vw 0;
 	font-family: $wrraper-font;
 	background-color: $nav-color;
