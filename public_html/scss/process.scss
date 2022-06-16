@@ -1,0 +1,103 @@
+@import "../../node_modules/mappy-breakpoints/mappy-breakpoints";
+@import "defaults.scss";
+@import "portfolio.scss";
+
+#wrraper {background: linear-gradient(
+    180deg, rgba(244,214,142,1) 0%,
+     rgba(209,228,189,1) 10%,
+     rgba(244,214,142,1) 50%,
+     rgba(209,228,189,1) 85%,
+     rgba(255,250,238,1) 100%);
+    }
+
+#menu {
+    padding: 5% 5% 0 5%;
+	text-align: center;
+
+    img {
+        border-radius: 0;
+        margin: 0 auto;
+        &:hover {box-shadow: none;}
+    }
+}
+
+.finish-start-icons {
+    z-index: 1;
+    @include mappy-bp (max-width 453px) {width: 50%;}
+}
+
+.menu-images {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5% 0;
+    position: relative;
+    row-gap: 4rem;
+
+    &::before {
+        border-right: 1rem dotted $button-font-color;
+        content: "";
+        height: 99%;
+        left: 50%;
+        position: absolute;
+        width: 0.625rem;
+        top: 3;
+        transform: translate(-50%);
+        z-index: 0;
+    }
+
+    &:nth-last-child(1) {margin-bottom: 5%;}
+
+    img {
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+.image-container {
+    background: $nav-color;
+    border: 2px solid #835531;
+    border-radius: 50px;
+    color: $button-font-color;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    justify-content: flex-start;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    @include mappy-bp (min-width 767px) {width: 50%;}
+
+     .text-under-image {
+         display: flex !important;
+         flex-direction: column;
+         padding: 1vw;
+        }
+
+
+    &:nth-child(even) {justify-content: flex-start;}
+    &:hover {box-shadow: 0 0 5px $button-font-color;}
+}
+
+.process-titles {padding: 2vw;}
+
+.deco-image {
+width: 100%;
+
+img {
+    width: 65%;
+    margin: 0 auto;
+}
+}
+
+.first-image {
+	background: linear-gradient(180deg, #f4d68e 46%, #d1e4bd 88%);
+	padding-top: 5em;
+	@include mappy-bp (max-width 1023px) {padding-top: 15%;}
+	@include mappy-bp (max-width 453px) {padding-top: 2em;}
+}
+
+footer {background: transparent;}
+.first-image {background:transparent;}
+

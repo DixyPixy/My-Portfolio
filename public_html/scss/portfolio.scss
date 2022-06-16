@@ -1,9 +1,16 @@
 @import "../../node_modules/mappy-breakpoints/mappy-breakpoints";
 @import "defaults.scss";
 
-body {background: linear-gradient(180deg, #f4d68e 0%, rgba(255,250,238,1) 53%);}
-
 #wrraper {
+	background: linear-gradient(
+		180deg, #f4d68e 0%, 
+		#fffaee 20%,
+		#d1e4bd 43%,
+		#fffaee 52%,
+	 	#f4d68e 68%,
+	 	#d1e4bd 96%,
+		#fffaee 100%);
+
 	@include mappy-bp (min-width 3840px) {
 		font-size: 2vh;
 		font-family: $wrraper-font;
@@ -11,7 +18,6 @@ body {background: linear-gradient(180deg, #f4d68e 0%, rgba(255,250,238,1) 53%);}
 		margin-left: auto;
 		margin-right: auto;
 		overflow: hidden;
-		background-color: $wrraper-color;
 
 		.text-medium,
 		.text-large {font-size: 2vh;}
@@ -31,7 +37,6 @@ body {background: linear-gradient(180deg, #f4d68e 0%, rgba(255,250,238,1) 53%);}
 .text-large {font-size: $font-l;}
 
 #first-nav {
-background: linear-gradient(0deg, #f4d68e 2%, rgba(255,250,238,1) 100%);
 transition: all ease .3s;
 padding-bottom: .5%;
 width: 100%;
@@ -43,14 +48,14 @@ align-items: center;
 position: fixed;
 top: -15px;
 left: 0;
-justify-content: center;
-z-index: 1;
+justify-content: space-evenly;
+z-index: 2;
 
 @include mappy-bp (max-width 767px) {display: none;}
 
 .bottom {
 	cursor: pointer;
-	width: 33%;
+	width: 20%;
 	height: 85px;
 	text-align: center;
 	position: relative;
@@ -158,7 +163,6 @@ a {text-decoration: underline;}
 }
 
 header {
-	background: linear-gradient(0deg, rgba(209,228,189,1) 11%, #f4d68e 80%);
 	display: flex;
     flex-direction: column;
     height: 100vh;
@@ -205,7 +209,7 @@ img {
 	border-radius: $padding-m;
 
 	&:hover {box-shadow: 0 0 5px $button-font-color;}
-	@include mappy-bp (max-width 1260px) {width: 400px;}
+	//@include mappy-bp (max-width 1260px) {width: 400px;}
 	@include mappy-bp (max-width 767px) {
 		border: none;
 		border-radius: 48px;
@@ -291,7 +295,6 @@ img {
 
 footer {
 	margin-top: $padding-m;
-	background: linear-gradient(180deg, rgba(209,228,189,1) 0%, rgba(255,250,238,1) 100%);
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -331,7 +334,7 @@ h2 {
 		margin: 1%;
 		position: fixed;
 		right: $padding-m;
-		z-index: 2;
+		z-index: 3;
 	}
 }
 
@@ -390,7 +393,6 @@ h2 {
 	flex-direction: column;
 	row-gap: 40px;
 	margin: $padding-m auto;
-	background: linear-gradient(180deg, rgba(209,228,189,1) 11%, rgba(255,250,238,1) 80%);
 	overflow-wrap: anywhere;
 	height: auto;
 	border-radius: 0 150px 150px 0;
